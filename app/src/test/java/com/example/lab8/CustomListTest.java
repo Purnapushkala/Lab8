@@ -32,8 +32,18 @@ public class CustomListTest {
         cityList.add(city);
         assertTrue(cityList.hasCity(city));
         assertFalse(cityList.hasCity(citys));
+    }
+    @Test
 
+    void testdelete(){
+        CustomList cityList = createList();
+        City city = new City("Strathcona","Alberta");
+        City citys = new City("Vancouver","British Columbia");
+        cityList.add(citys);
+        assertThrows( IllegalArgumentException.class, ()->{cityList.delete(citys);});
+        cityList.delete(citys);
 
     }
+
 
 }
