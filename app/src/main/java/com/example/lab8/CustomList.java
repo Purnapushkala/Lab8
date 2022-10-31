@@ -48,10 +48,11 @@ public class CustomList extends ArrayAdapter<City> {
     public int getCount(){
         return cities.size();
     }
+
     public void addCity(City city){
         cities.add(city);
-
     }
+
     public boolean hasCity(City city){
         if (cities.contains(city)){
             return true;
@@ -60,6 +61,7 @@ public class CustomList extends ArrayAdapter<City> {
             return false;
         }
     }
+
     public void delete(City city){
         if (cities.contains(city)){
             cities.remove(city);
@@ -69,8 +71,8 @@ public class CustomList extends ArrayAdapter<City> {
             throw new IllegalArgumentException();
         }
     }
-    public int countCities(){
 
+    public int countCities() {
+        return cities.size();
     }
-
 }
